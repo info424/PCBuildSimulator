@@ -32,7 +32,9 @@ if (is_numeric($first_num) && is_numeric($second_num)) {
         case "Multiply":
             $result = $first_num * $second_num;
             break;
-      case
+        case  "Divide":
+            $result = $first_num / $second_num;
+            break;
     }
 }
 
