@@ -3,38 +3,38 @@
 // + 1 o variabila pentru rezultat
 // 4 variabile pentru tipul operatiei
 
-$a = 7;
-$b = 3.8;
+function calculator($a, $b)
+{
+    // Definirea operatiilor
+    $adunare = $a + $b;
+    $scadere = $a - $b;
+    $inmultire = $a * $b;
+    $impartire = $b != 0 ? $a / $b : 'Impartire la zero';
 
-$e = $a * $b;
-$f = $a / $b;
-$g = $a - $b;
-$h = $a + $b;
-
-echo $e; echo ' <-inmultire'; echo '<br>';
-echo $f; echo ' <-impartire'; echo '<br>';
-echo $g; echo ' <-scadere'; echo '<br>';
-echo $h; echo ' <-adunare'; echo '<br>';
-
-// test
-$first_num = $_POST['first_num'];
-$second_num = $_POST['second_num'];
-$operator = $_POST['operator'];
-$result = '';
-if (is_numeric($first_num) && is_numeric($second_num)) {
-    switch ($operator) {
-        case "Add":
-            $result = $first_num + $second_num;
-            break;
-        case "Subtract":
-            $result = $first_num - $second_num;
-            break;
-        case "Multiply":
-            $result = $first_num * $second_num;
-            break;
-        case  "Divide":
-            $result = $first_num / $second_num;
-            break;
-    }
+    // Afisarea rezultatelor
+    echo "Rezultatul adunarii este: $adunare<br>";
+    echo "Rezultatul scaderii este: $scadere<br>";
+    echo "Rezultatul inmultirii este: $inmultire<br>";
+    echo "Rezultatul impartirii este: $impartire<br>";
 }
 
+// Apelarea functiei cu valori de test
+calculator(10, 5);
+
+
+function adunare($a, $b) {
+    return $a + $b;
+}
+
+function scadere($a, $b) {
+    return $a - $b;
+}
+
+function inmultire($a, $b) {
+    return $a * $b;
+}
+
+function impartire($a, $b) {
+    $b = $b != 0 ? $b : 1;
+    return $a / $b;
+}
