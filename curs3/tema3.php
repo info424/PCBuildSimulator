@@ -1,4 +1,5 @@
 <?php
+//tema 1
 function operatiiMatematice($a, $b) {
     $operatii = [
         'adunare' => $a + $b,
@@ -18,7 +19,7 @@ function operatiiMatematice($a, $b) {
     echo "Operatia care produce cel mai mare rezultat este: $maxOp cu valoarea $maxVal";
 }
 
-
+//tema 2
 function tablaInmultirii($n) {
     if ($n >= 0 && $n <= 10) {
         for ($i = 0; $i <= 10; $i++) {
@@ -31,7 +32,7 @@ function tablaInmultirii($n) {
 
 
 
-
+//tema 3
 function comparatii($x, $y) {
     echo "$x este " . ($x < $y ? "mai mic" : "nu este mai mic") . " decât $y";
     echo "$x este " . ($x <= $y ? "mai mic sau egal" : "nu este mai mic sau egal") . " cu $y";
@@ -43,7 +44,7 @@ function comparatii($x, $y) {
 
 
 
-
+//tema 4
 function operatieConditii($param1, $param2, $param3) {
     $param2 = $param2 <= 0 ? 1 : $param2;
     $param3 = $param3 <= 0 ? 2 : $param3;
@@ -51,6 +52,9 @@ function operatieConditii($param1, $param2, $param3) {
     if (($param1 - $param2) > 5 && ($param3 % 2) == 0) {
         echo "Rezultatul este: " . (($param1 / $param2) ** $param2);
     } else {
-        echo "rip.";
+        echo "rip";
     }
 }
+
+
+//: intre paranteze si acolada ca sa declar valoarea, int float orice ar fi ca sa il fac sa mearga mai rpd
