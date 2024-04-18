@@ -49,9 +49,8 @@ function operatieConditii($param1, $param2, $param3) {
     $param3 = $param3 <= 0 ? 2 : $param3;
 
     if (($param1 - $param2) > 5 && ($param3 % 2) == 0) {
-        echo "Rezultatul este: " . (pow(($param1 / $param2), $param2));
+        echo "Rezultatul este: " . (($param1 / $param2) ** $param2);
     } else {
         echo "rip.";
     }
 }
-?>

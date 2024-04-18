@@ -19,7 +19,7 @@ function calculator($a, $b)
 }
 
 // Apelarea functiei cu valori de test
-calculator(10, 5);
+calculator(30, 40);
 
 
 function adunare($a, $b) {
