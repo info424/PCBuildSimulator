@@ -23,7 +23,7 @@ function numaraNumerePare($vector) {
 }
 
 
-
+// de pus *else la numere impare
 
 
 function Palindrom($numar) {
@@ -38,8 +38,8 @@ function Palindrom($numar) {
 // strrev face sa fie pe dos - reverses a string
 //The strrev() function reverses a string.
 
-
-
+// function test($test) {
+// if (
 
 
 

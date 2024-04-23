@@ -25,6 +25,11 @@ if ( 5 > 7 && 3 > 2) {
     echo 'nice to have';
 }
 
+// == => ex.: $x==$y Egalitate, returneaza true daca ambii operanzi au aceeasi valoare (chiar daca nu au acelasi tip)
+// === => ex.: $x===$y Identitate, returneaza true daca ambii operanzi au aceeasi valoare si acelasi tip de date
+// != => ex.: $x != $y Valori diferite. Returneaza true daca operanzii au valori diferite
+// <=> => ex.: Spaceship
+
 
 // if true = se afiseaza
 // if false = nu se afiseaza
