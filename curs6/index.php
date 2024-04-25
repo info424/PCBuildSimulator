@@ -47,6 +47,25 @@ echo nl2br('this is a new text') . '<br>';
 
 echo str_replace(' ', '---' , $lastName) . '<br>';
 
+$string = 'Asteptam sa vina vara!';
+$chars = explode(' ', $string);
+var_dump($chars);
+echo '<br>';
+
+$chars = preg_split('/ /', $string);
+var_dump($chars);
+
+
+$cars = ['Volvo', 'BMW', 'Toyota'];
+echo 'I have the following cars in my garage:' . implode(',', $cars) . '.';
+echo '<br>';
+
+echo str_repeat($string[7], 3);
+// repeat la elemente dintr un array
+
+echo '<br>';
+var_dump(str_split($string));
+
 
 
 
