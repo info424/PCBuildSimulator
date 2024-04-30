@@ -72,6 +72,41 @@ print_r(elements($arrayOfArrays, $array));
 
 
 
+function initVector()
+{
+
+    $vector = array();
+
+    // Pentru fiecare index de la 0 la 9
+    for ($i = 0; $i < 10; $i++) {
+        // + un vector asociativ cu cheile 'nume', 'oraş' și 'telefon', toate cu valoarea 'Null'.
+        $vector[$i] = array('nume' => 'Null', 'oraş' => 'Null', 'telefon' => 'Null');
+    }
+
+    // Returnăm la final vector
+    return $vector;
+}
+
+
+
+
+
+//
+// alta functie
+function popVector($vector, $index, $nume, $oras, $telefon)
+{
+    // Verificam dacă vectorul conține indexul configurat
+    if (isset($vector[$index])) {
+        // Dacă da, populăm vectorul asociativ aflat la acel index cu valorile date
+        $vector[$index] = array('nume' => $nume, 'oraş' => $oras, 'telefon' => $telefon);
+    }
+
+    // Return vectorul actualizat (sau neschimbat, dacă indexul nu exista)
+    return $vector;
+}
+
+
+
 
 
 
