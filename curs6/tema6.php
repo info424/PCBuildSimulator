@@ -80,10 +80,10 @@ function initVector()
     // Pentru fiecare index de la 0 la 9
     for ($i = 0; $i < 10; $i++) {
         // + un vector asociativ cu cheile 'nume', 'oraş' și 'telefon', toate cu valoarea 'Null'.
-        $vector[$i] = array('nume' => 'Null', 'oraş' => 'Null', 'telefon' => 'Null');
+        $vector[$i] = array('nume' => Null, 'oraş' => Null, 'telefon' => Null);
     }
 
-    // Returnăm la final vector
+    // Returnam la final vector
     return $vector;
 }
 
@@ -95,17 +95,26 @@ function initVector()
 // alta functie
 function popVector($vector, $index, $nume, $oras, $telefon)
 {
-    // Verificam dacă vectorul conține indexul configurat
+    //
     if (isset($vector[$index])) {
-        // Dacă da, populăm vectorul asociativ aflat la acel index cu valorile date
         $vector[$index] = array('nume' => $nume, 'oraş' => $oras, 'telefon' => $telefon);
+//    $vector[$index]['nume'] = $nume;
+
     }
 
-    // Return vectorul actualizat (sau neschimbat, dacă indexul nu exista)
     return $vector;
 }
 
+$persoane = initVector();
+$persoaneCuValori = popVector($persoane, 2 , 'David', 'Bucuresti', '055555');
 
+var_dump($persoane, $persoaneCuValori);
+
+
+// print_r => pentru arrays
+// print => afisare de texte
+// echo => afis de valori pentru arrays/string
+// var_dump => iti ofera mai multe detalii (tipul variabile, date etc.)
 
 
 
