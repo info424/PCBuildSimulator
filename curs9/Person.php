@@ -13,6 +13,10 @@ class Person {
         $this->address = $address;
     }
 
+    public function getFirstName(){
+        return $this->firstName;
+    }
+
 }
 
 

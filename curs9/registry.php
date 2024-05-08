@@ -13,8 +13,18 @@ class Registry {
     public function addPerson($person){
         $this->people[] = $person;
 }
-    public function __destruct(){
-        echo 'distrus';
+//    public function __destruct(){
+//        echo 'distrus';
+//    }
+    public function getPeople(): array{
+        return $this->people;
+    }
+    public function getPeopleNames(): string {
+        $lista = '';
+        foreach ($this->people as $person) {
+            $lista .= $person->getFirstName(). ',';
+        }
+        return $lista;
     }
 }
 
@@ -27,6 +37,8 @@ $person2 = new Person('Marian', 'Trifu', $adress2);
 $registry->addPerson($person2);
 
 
-unset($registry);
-//var_dump($registry);
+//unset($registry);
+//var_dump($registry->getPeople());
+//var_dump($registry->people);
 
+echo  $registry->getPeopleNames();
