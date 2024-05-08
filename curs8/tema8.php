@@ -16,7 +16,7 @@ if (isset($_COOKIE[$cookie_name])) {
     echo "Cookie-ul cu numele '" . $cookie_name . "' există!<br>";
     echo "Valoarea este: " . $_COOKIE[$cookie_name];
 } else {
-    echo "Cookie-ul cu numele '" . $cookie_name . "' nu există.";
+    echo "Cookie-ul cu numele '" . $cookie_name . "' nu exista.";
 }
 
 
@@ -32,7 +32,7 @@ if (!isset($_SESSION['access_count'])) {
 }
 
 echo '<br>';
-echo "Numărul de accesări al paginii: " . $_SESSION['access_count'];
+echo "Numarul de accesari al paginii: " . $_SESSION['access_count'];
 
 
 
