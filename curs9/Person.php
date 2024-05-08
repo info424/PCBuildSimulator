@@ -1,6 +1,6 @@
 <?php
 
-require('Address.php');
+require_once('Address.php');
 class Person {
     public string $firstName;
     public string $lastName;

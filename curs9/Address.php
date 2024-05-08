@@ -1,6 +1,6 @@
 <?php
 
-class Adress {
+class Address {
     public string $country;
     public string $county;
     public string $street;
@@ -12,7 +12,7 @@ class Adress {
         $county1,
         $street1,
         $streetNumber1,
-        $postalCode1,
+        $postalCode1
         ) {
         $this->country = $country1;
         $this->county = $county1;
