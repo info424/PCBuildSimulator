@@ -3,7 +3,7 @@
 
 require_once ('Animal.php');
 //require_once('MoveInterface.php');
-class Dog extends Animal // implements MoveInterface
+final class Dog extends Animal // implements MoveInterface
 {
     public function getLegs(){
         return $this->legs;

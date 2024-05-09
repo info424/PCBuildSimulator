@@ -3,6 +3,7 @@
 require_once ('Dog.php');
 require_once ('Bird.php');
 require_once ('StringHelper.php');
+require_once ('Azor.php');
 
 $dog = new Dog('Pufi');
 $dog->setLegs(4);
@@ -22,6 +23,10 @@ echo '<br>';
 echo $bird->move();
 echo '<br>';
 echo StringHelper::toCamelCase('LOLI');
+
+new Azor();
+
+
 //var_dump($dog);
 
 
