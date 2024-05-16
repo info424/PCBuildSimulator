@@ -1,0 +1,19 @@
+{
+    "name": "ilbah/shop",
+    "description": "shop app",
+    "type": "project",
+    "require-dev": {
+        "symfony/var-dumper": "^6.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ilbah\\Shop\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Georgiana"
+        }
+    ],
+    "require": {}
+}
