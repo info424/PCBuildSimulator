@@ -13,3 +13,16 @@ $author = new Author();
 $book2 = new BookLibrary();
 $publishingHouse = new PublishingHouse();
 dd($book, $author, $publishingHouse, $book2);
+
+
+
+
+
+
+
+
+
+
+
+
+
