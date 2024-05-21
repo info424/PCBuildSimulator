@@ -4,7 +4,7 @@ namespace Ilbah\Shop;
 
 abstract class Product implements Taxable
 {
-    protected int $id;
+    use ProductIdentifierTrait, TaxableTrait;
 
     protected string $name;
 
@@ -20,9 +20,7 @@ abstract class Product implements Taxable
         $this->category = $category;
     }
 
-    public function getId(): int {
-        return $this->id;
-    }
+
     public function getName(): string {
         return $this->name;
     }

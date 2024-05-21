@@ -10,4 +10,8 @@ class Cart
     {
         $this->items[] = $product;
     }
+
+    public function getItems(): array{
+        return $this->items;
+    }
 }

@@ -12,5 +12,9 @@ $fanta = new Juice(2, 1, 'Fanta', 7.5, $category);
 $milka = new Chocolate(3, 90, 'Milka Caramel', 6.4, $category);
 $africana = new Chocolate(4, 95, 'Africana Coconut', 3.7, $category);
 
-$products = [$cola, $fanta, $milka, $africana];
-
+$products = [
+    $cola->getId() => $cola,
+    $fanta->getId() => $fanta,
+    $milka->getId() => $milka,
+    $africana->getId() => $africana,
+];

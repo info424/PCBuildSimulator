@@ -12,9 +12,9 @@ class Juice extends Product
         parent::__construct($id, $name, $price, $category); //aceasta cheie se refera la clasa Product.
     }
 
-    public function tax(): float
-    {
-        return $this->price * 1.09;
-    }
+//    public function tax(): float
+//    {
+//        return $this->price * 1.09;
+//    }
 
 }

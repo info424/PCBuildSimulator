@@ -21,3 +21,7 @@ require_once "index.php";
     </tr>
     <?php endforeach; ?>
 </table>
+
+<a href="cart.php">Cart
+
+</a>
