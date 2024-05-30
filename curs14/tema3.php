@@ -8,6 +8,15 @@ abstract class Vehicul {
     protected $tipMotor;
     protected $numarLocuri;
 
+    public function __construct($marca, $model, $numarRoti, $tipMotor, $numarLocuri) {
+        $this->marca = $marca;
+        $this->model = $model;
+        $this->numarRoti = $numarRoti;
+        $this->tipMotor = $tipMotor;
+        $this->numarLocuri = $numarLocuri;
+    }
+
+
     // Metode abstracte
     abstract public function claxoneaza();
     abstract public function semnalizeaza();
@@ -37,14 +46,6 @@ abstract class Vehicul {
 // Definirea clasei Masina care extinde Vehicul
 class Masina extends Vehicul {
     // Constructor pentru inițializarea proprietăților
-    public function __construct($marca, $model, $numarRoti, $tipMotor, $numarLocuri) {
-        $this->marca = $marca;
-        $this->model = $model;
-        $this->numarRoti = $numarRoti;
-        $this->tipMotor = $tipMotor;
-        $this->numarLocuri = $numarLocuri;
-    }
-
     // Implementarea metodei claxoneaza
     public function claxoneaza() {
         echo "Masina $this->marca $this->model claxoneaza.\n";
@@ -59,13 +60,6 @@ class Masina extends Vehicul {
 // Definirea clasei Motocicleta care extinde Vehicul
 class Motocicleta extends Vehicul {
     // Constructor pentru inițializarea proprietăților
-    public function __construct($marca, $model, $numarRoti, $tipMotor, $numarLocuri) {
-        $this->marca = $marca;
-        $this->model = $model;
-        $this->numarRoti = $numarRoti;
-        $this->tipMotor = $tipMotor;
-        $this->numarLocuri = $numarLocuri;
-    }
 
     // Implementarea metodei claxoneaza
     public function claxoneaza() {
@@ -85,7 +79,7 @@ class Garaj {
     private $listaMotociclete = array();
 
     // Metodă pentru a adăuga o mașină în garaj
-    public function adaugaMasina($masina) {
+    public function adaugaMasina(Masina $masina) {
         $this->listaMasini[] = $masina;
     }
 
@@ -99,7 +93,7 @@ class Garaj {
     }
 
     // Metodă pentru a adăuga o motocicletă în garaj
-    public function adaugaMotocicleta($motocicleta) {
+    public function adaugaMotocicleta(Motocicleta $motocicleta) {
         $this->listaMotociclete[] = $motocicleta;
     }
 

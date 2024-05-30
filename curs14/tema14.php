@@ -20,7 +20,7 @@ class Matematica {
 
     // impartire
     public static function impartire($param1, $param2) {
-        // Check for division by zero
+        //
         if ($param2 == 0) {
             echo "Division by zero error!\n";
         } else {
