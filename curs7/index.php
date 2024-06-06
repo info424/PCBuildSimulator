@@ -35,7 +35,7 @@
 ?>
 
 
-<!--<form action="index.php" method='GET'>-->
+<!--<form action="pdo_db_conn.php" method='GET'>-->
 <!--   First name: <input type='text' name='first_name'> <br/>-->
 <!--    Last name: <input type='text' name='last_name'> <br/>-->
 <!--    <input type="submit" value="Send">-->

@@ -1,6 +1,6 @@
 <?php
 //
-//require_once('index.php');
+//require_once('pdo_db_conn.php');
 //
 //$produs1 = new Produs('Telefon', 1500);
 //
