@@ -17,7 +17,7 @@ if (isset($_POST['name'])) {
 
     $category = new Category($category['name']);
     $expiresAt = new \DateTime($_POST['expiresAt']);
-    $fruit = new Fruit($_POST['name'], $category, $expiresAt, $_POST['price']);
+    $fruit = new Fruit($_POST['name'], $category, $expiresAt, (float)$_POST['price']);
 
 
     $stmt = $connection->prepare(
@@ -28,6 +28,8 @@ if (isset($_POST['name'])) {
     $stmt->bindValue(':expiresAt', $fruit->getExpiresAt()->format('Y-m-d H:i:s'));
     $stmt->bindValue(':price', $fruit->getPrice());
     $stmt->execute();
+
+    header('Location: index.php');
 
 }
 
