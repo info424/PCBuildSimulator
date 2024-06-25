@@ -7,29 +7,38 @@ class Category
     private string $name;
     private string $type;
 
-    const VALUES = [
-        'exotic',
-        'foreign',
-        'country',
-        'seasonal',
+    const VEGETABLES = [
+        'Root',
+        'Leafy green',
+        'Cruciferous',
+        'Allium',
+    ];
+
+    const FRUITS = [
+        'Citrus',
+        'Exotic',
+        'Berries',
+        'Stone fruits',
     ];
 
     const TYPES = [
         'Vegetables',
         'Fruits',
     ];
-    public function __construct(string $name, string $type)
+        public function __construct(string $name, string $type)
     {
-        if (! is_string($name)) {
+        if (!is_string($name)) {
             throw new \Exception('Name of category must be string');
         }
 
-        if (! in_array($name, self::VALUES)) {
-            throw new \Exception('Name of category must be one of ' . implode(', ', self::VALUES));
+        if (!in_array($type, self::TYPES)) {
+            throw new \Exception('Type of category must be one of ' . implode(', ', self::TYPES));
         }
 
-        if (! in_array($type, self::TYPES)) {
-            throw new \Exception('Name of category must be one of ' . implode(', ', self::TYPES));
+        $validValues = ($type === 'Vegetables') ? self::VEGETABLES : self::FRUITS;
+
+        if (!in_array($name, $validValues)) {
+            throw new \Exception('Name of category must be one of ' . implode(', ', $validValues));
         }
 
         $this->name = $name;
@@ -40,8 +49,9 @@ class Category
     {
         return $this->type;
     }
-
-    public function getName(){
+    public function getName(): string
+    {
         return $this->name;
     }
+
 }

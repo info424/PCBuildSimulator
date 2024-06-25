@@ -6,13 +6,13 @@ use DateTime;
 
 class Fruit
 {
-    private string $name;
+    protected string $name;
 
-    private Category $category;
+    protected Category $category;
 
-    private DateTime $expiresAt;
+    protected DateTime $expiresAt;
 
-    private float $price;
+    protected float $price;
 
     public function __construct(string $name, Category $category, DateTime $expiresAt, float $price)
     {
@@ -21,19 +21,23 @@ class Fruit
         $this->expiresAt = $expiresAt;
         $this->price = $price;
     }
-
-    public function getName(): string {
+    public function getName(): string
+    {
         return $this->name;
     }
 
-    public function getCategory(): Category {
+    public function getCategory(): Category
+    {
         return $this->category;
     }
 
-    public function getExpiresAt(): DateTime {
+    public function getExpiresAt(): DateTime
+    {
         return $this->expiresAt;
     }
-    public function getPrice(): float {
+
+    public function getPrice(): float // int = numar intreg, float = cu 2 zecimale
+    {
         return $this->price;
     }
 }

@@ -9,21 +9,23 @@ if (isset($_POST['name'])) {
     try {
         $category = new Category($_POST['name'], $_POST['type']);
 
-        $stmt = $connection->prepare("INSERT INTO categories (name) VALUES (:name)");
+        $stmt = $connection->prepare("INSERT INTO categories (name, type) VALUES (:name, :type)");
         $stmt->bindValue(':name', $category->getName());
+        $stmt->bindValue(':type', $category->getType());
         $stmt->execute();
 
         header('Location: index.php');
     } catch (PDOException $PDOException) {
-        if($PDOException->getCode() == '23000') {
-            echo '<p style = "color: red;">Value already in database!</p>';
+        if ($PDOException->getCode() == '23000') {
+            echo '<p style="color: red;">Value already in database!</p>';
         } else {
-            echo '<p style = "color: red">' . $PDOException->getMessage() . '</p>';
+            echo '<p style="color: red">' . $PDOException->getMessage() . '</p>';
         }
     } catch (\Exception $e) {
-        echo '<p style = "color: red">' . $e->getMessage() . '</p>';
+        echo '<p style="color: red">' . $e->getMessage() . '</p>';
     }
 }
+
 ?>
 
 <form action="addCategory.php" method="post">

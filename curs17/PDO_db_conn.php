@@ -9,7 +9,7 @@ $host = 'localhost';
 try {
     $connection = new PDO("mysql:host=$host;dbname=bazar", $user, $password);
 } catch (PDOException $e) {
-    var_dump($e);  echo '<br><br>';
+    var_dump($e);
     echo $e->getMessage();
 }
 
