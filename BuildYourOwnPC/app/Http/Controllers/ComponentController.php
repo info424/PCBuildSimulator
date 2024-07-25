@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class ComponentController extends Controller
 {
+
     public function index()
     {
         $components = Component::all();
@@ -32,6 +33,7 @@ class ComponentController extends Controller
 
     public function edit(Component $component)
     {
+//        dd($component);
         return view('components.edit', compact('component'));
     }
 

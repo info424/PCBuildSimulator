@@ -9,7 +9,14 @@ class PCBuild extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['cpu_id', 'gpu_id', 'motherboard_id', 'ram_id', 'storage_id', 'power_supply_id', 'cooling_system_id'];
+    protected $table = 'pc_builds';
+
+    protected $fillable = ['user_id', 'cpu_id', 'gpu_id', 'motherboard_id', 'ram_id', 'storage_id', 'power_supply_id', 'cooling_system_id'];
+
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 
     public function cpu()
     {
@@ -46,3 +53,4 @@ class PCBuild extends Model
         return $this->belongsTo(Component::class, 'cooling_system_id');
     }
 }
+

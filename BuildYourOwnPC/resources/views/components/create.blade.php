@@ -17,8 +17,8 @@
                     <option value="Motherboard">Motherboard</option>
                     <option value="RAM">RAM</option>
                     <option value="Storage">Storage</option>
-                    <option value="Power Supply">Power Supply</option>
-                    <option value="Cooling System">Cooling System</option>
+                    <option value="Power_Supply">Power_Supply</option>
+                    <option value="Cooling_System">Cooling_System</option>
                 </select>
             </div>
             <div class="form-group">

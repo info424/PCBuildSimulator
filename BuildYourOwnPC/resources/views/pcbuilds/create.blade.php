@@ -16,7 +16,7 @@
                 <tbody>
                 @foreach($componentTypes as $type)
                     <tr>
-                        <td>{{ ucfirst($type) }}</td>
+                        <td>{{ str_replace('_', ' ', ucfirst($type)) }}</td>
                         <td>
                             <select name="{{ $type }}_id" class="form-control">
                                 @foreach($components[$type] as $component)

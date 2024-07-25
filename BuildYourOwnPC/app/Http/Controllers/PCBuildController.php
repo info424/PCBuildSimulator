@@ -1,20 +1,22 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\Models\PCBuild;
 use App\Models\Component;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PCBuildController extends Controller
 {
+
     public function create()
     {
         $componentTypes = ['cpu', 'gpu', 'motherboard', 'ram', 'storage', 'power_supply', 'cooling_system'];
         $components = [];
 
         foreach ($componentTypes as $type) {
-            $components[$type] = Component::where('type', ucfirst($type))->take(5)->get();
+            $typeLabel = str_replace('_', ' ', ucfirst($type));
+            $components[$type] = Component::where('type', $typeLabel)->take(5)->get();
         }
 
         return view('pcbuilds.create', compact('components', 'componentTypes'));
@@ -32,7 +34,18 @@ class PCBuildController extends Controller
             'cooling_system_id' => 'required|exists:components,id',
         ]);
 
+
+        $validated['user_id'] = Auth::id();
+
+//        dd($validated);
+
         PCBuild::create($validated);
+
         return redirect()->route('pcbuilds.create')->with('success', 'PC build created successfully.');
+    }
+    public function index()
+    {
+        $pcBuilds = Auth::user()->pcBuilds;
+        return view('pcbuilds.index', compact('pcBuilds'));
     }
 }
