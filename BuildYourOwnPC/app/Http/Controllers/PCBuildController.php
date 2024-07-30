@@ -48,4 +48,16 @@ class PCBuildController extends Controller
         $pcBuilds = Auth::user()->pcBuilds;
         return view('pcbuilds.index', compact('pcBuilds'));
     }
+
+    public function destroy($id)
+    {
+        $pcBuild = PCBuild::findOrFail($id);
+
+        if ($pcBuild->user_id !== Auth::id()) {
+            return redirect()->route('pcbuilds.index')->with('error', 'Unauthorized action.');
+        }
+
+        $pcBuild->delete();
+        return redirect()->route('pcbuilds.index')->with('success', 'PC build deleted successfully.');
+    }
 }

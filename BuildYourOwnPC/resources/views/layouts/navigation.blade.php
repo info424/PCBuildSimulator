@@ -21,7 +21,7 @@
                     <x-nav-link :href="route('pcbuilds.index')" :active="request()->routeIs('pcbuilds.index')">
                         My Pc Build
                     </x-nav-link>
-                    <x-nav-link :href="route('components.create')" :active="request()->routeIs('components.create')">
+                    <x-nav-link :href="route('pcbuilds.create')" :active="request()->routeIs('pcbuilds.create')">
                         My Pc Build
                     </x-nav-link>
                 </div>

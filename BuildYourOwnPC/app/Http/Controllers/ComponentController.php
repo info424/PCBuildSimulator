@@ -34,7 +34,7 @@ class ComponentController extends Controller
     public function edit(Component $component)
     {
 //        dd($component);
-        return view('components.edit', compact('component'));
+        return view('components.edit', ['componenta' => $component]);
     }
 
     public function update(Request $request, Component $component)
