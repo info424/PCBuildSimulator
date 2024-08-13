@@ -8,8 +8,6 @@ This project was made with Laragon, Laravel, Bootstrap and PHP.
 
 In the project directory, you can run:
 
-### `yarn start`
-
 Runs the app in the development mode.\
 Open [http://localhost:38000]
 
